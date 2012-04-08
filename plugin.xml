@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="Sniff Search"
+            id="com.sudeep_juvekar.sniff">
+      </category>
+      <view
+            name="Sniff Search"
+            icon="icons/sample.gif"
+            category="com.sudeep_juvekar.sniff"
+            class="com.sudeep_juvekar.sniff.views.SearchPart"
+            id="com.sudeep_juvekar.sniff.views.SearchPart">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.jdt.ui.JavaPerspective">
+         <view
+               ratio="0.5"
+               relative="org.eclipse.ui.views.TaskList"
+               relationship="right"
+               id="com.sudeep_juvekar.sniff.views.SearchPart">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts.xml">
+      </contexts>
+   </extension>
+
+</plugin>
